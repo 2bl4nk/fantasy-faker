@@ -1,0 +1,17 @@
+{
+    "name": "danhanly/fantasy-faker",
+    "authors": [
+        {
+            "name": "Dan Hanly",
+            "email": "danhanly@gmail.com"
+        }
+    ],
+    "require": {
+        "fzaninotto/faker": "^1.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "DanHanly\\FantasyFaker": "src/FantasyFaker/"
+        }
+    },
+}
