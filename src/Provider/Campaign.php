@@ -10,7 +10,7 @@ class Campaign extends Base
         '{{campaignPrefix}} the {{campaignBeast}}',
         '{{campaignPrefix}} {{campaignName}}',
         'The {{campaignBeast}} {{campaignSuffix}}',
-        '{{campaignName}} {{campaignSuffix}}'
+        '{{campaignName}}{{campaignSuffix}}'
     ];
 
     protected static $campaignPrefix = [
@@ -26,7 +26,7 @@ class Campaign extends Base
     ];
 
     protected static $campaignSuffix = [
-        'of Doom', '\'s Journey', '\'s Quest', 'Doom of', 'Death of',
+        ' of Doom', '\'s Journey', '\'s Quest',
     ];
 
 
