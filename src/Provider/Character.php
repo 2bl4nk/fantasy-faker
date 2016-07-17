@@ -32,4 +32,19 @@ class Character extends Base
         $format = static::randomElement(self::$nameFormat);
         return $this->generator->parse($format);
     }
+
+    public static function name()
+    {
+        return static::randomElement(static::$name);
+    }
+
+    public static function suffix()
+    {
+        return static::randomElement(static::$suffix);
+    }
+
+    public static function town()
+    {
+        return static::randomElement(static::$town);
+    }
 }

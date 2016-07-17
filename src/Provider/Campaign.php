@@ -35,4 +35,24 @@ class Campaign extends Base
         $format = static::randomElement(self::$campaignFormat);
         return $this->generator->parse($format);
     }
+
+    public static function prefix()
+    {
+        return static::randomElement(static::$prefix);
+    }
+
+    public static function beast()
+    {
+        return static::randomElement(static::$beast);
+    }
+
+    public static function name()
+    {
+        return static::randomElement(static::$name);
+    }
+
+    public static function suffix()
+    {
+        return static::randomElement(static::$suffix);
+    }
 }
