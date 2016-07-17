@@ -1,13 +1,15 @@
 <?php
 
+namespace DanHanly\FantasyFaker\Provider;
+
 use Faker\Provider\Base;
 
 class Campaign extends Base
 {
     protected static $campaignFormat = [
-        '{{prefix}} {{beast}}',
+        '{{prefix}} the {{beast}}',
         '{{prefix}} {{name}}',
-        '{{beast}} {{suffix}}',
+        'The {{beast}} {{suffix}}',
         '{{name}} {{suffix}}'
     ];
 
@@ -22,6 +24,11 @@ class Campaign extends Base
     protected static $beast = [
         'Dragon', 'Lich', 'Dire Wolf', 'Spirit', 'Ent', 'Elf', 'Dwarf', 'Kobold', 'Goblin'
     ];
+
+    protected static $suffix = [
+        'of Doom', '\'s Journey', '\'s Quest', 'Doom of', 'Death of',
+    ];
+
 
     public function campaign()
     {
