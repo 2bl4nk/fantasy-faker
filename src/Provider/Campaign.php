@@ -8,16 +8,16 @@ class Campaign extends Base
 {
     protected static $campaignFormat = [
         '{{campaignPrefix}} the {{campaignBeast}}',
-        '{{campaignPrefix}} {{campaignName}}',
-        'The {{campaignBeast}} {{campaignSuffix}}',
-        '{{campaignName}}{{campaignSuffix}}'
+        '{{campaignPrefix}} {{characterName}}',
+        'The {{campaignBeast}}{{campaignSuffix}}',
+        '{{characterName}}{{campaignSuffix}}'
     ];
 
     protected static $campaignPrefix = [
-        'Chronicles of', 'Sword of', 'Sword of the', 'Doom of', 'Death of',
+        'Chronicles of', 'Sword of', 'Sword of the', 'Doom of', 'Death of', 'Flames of',
     ];
 
-    protected static $campaignName = [
+    protected static $characterName = [
         'Mordred', 'Thalion', 'Scrane', 'Gandalf', 'Eowyn', 'Gwen', 'Rurik', 'Andrea', 'Smeagol', 'Eddard', 'Tyrion', 'Sansa'
     ];
 
@@ -26,7 +26,7 @@ class Campaign extends Base
     ];
 
     protected static $campaignSuffix = [
-        ' of Doom', '\'s Journey', '\'s Quest',
+        ' of Doom', '\'s Journey', '\'s Quest', '\'s Lament',
     ];
 
 
@@ -46,9 +46,9 @@ class Campaign extends Base
         return static::randomElement(static::$campaignBeast);
     }
 
-    public static function campaignName()
+    public static function characterName()
     {
-        return static::randomElement(static::$campaignName);
+        return static::randomElement(static::$characterName);
     }
 
     public static function campaignSuffix()
