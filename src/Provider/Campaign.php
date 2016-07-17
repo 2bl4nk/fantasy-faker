@@ -7,25 +7,25 @@ use Faker\Provider\Base;
 class Campaign extends Base
 {
     protected static $campaignFormat = [
-        '{{prefix}} the {{beast}}',
-        '{{prefix}} {{name}}',
-        'The {{beast}} {{suffix}}',
-        '{{name}} {{suffix}}'
+        '{{campaignPrefix}} the {{campaignBeast}}',
+        '{{campaignPrefix}} {{campaignName}}',
+        'The {{campaignBeast}} {{campaignSuffix}}',
+        '{{campaignName}} {{campaignSuffix}}'
     ];
 
-    protected static $prefix = [
+    protected static $campaignPrefix = [
         'Chronicles of', 'Sword of', 'Sword of the', 'Doom of', 'Death of',
     ];
 
-    protected static $name = [
+    protected static $campaignName = [
         'Mordred', 'Thalion', 'Scrane', 'Gandalf', 'Eowyn', 'Gwen', 'Rurik', 'Andrea', 'Smeagol', 'Eddard', 'Tyrion', 'Sansa'
     ];
 
-    protected static $beast = [
+    protected static $campaignBeast = [
         'Dragon', 'Lich', 'Dire Wolf', 'Spirit', 'Ent', 'Elf', 'Dwarf', 'Kobold', 'Goblin'
     ];
 
-    protected static $suffix = [
+    protected static $campaignSuffix = [
         'of Doom', '\'s Journey', '\'s Quest', 'Doom of', 'Death of',
     ];
 
@@ -36,23 +36,23 @@ class Campaign extends Base
         return $this->generator->parse($format);
     }
 
-    public static function prefix()
+    public static function campaignPrefix()
     {
-        return static::randomElement(static::$prefix);
+        return static::randomElement(static::$campaignPrefix);
     }
 
-    public static function beast()
+    public static function campaignBeast()
     {
-        return static::randomElement(static::$beast);
+        return static::randomElement(static::$campaignBeast);
     }
 
-    public static function name()
+    public static function campaignName()
     {
-        return static::randomElement(static::$name);
+        return static::randomElement(static::$campaignName);
     }
 
-    public static function suffix()
+    public static function campaignSuffix()
     {
-        return static::randomElement(static::$suffix);
+        return static::randomElement(static::$campaignSuffix);
     }
 }
